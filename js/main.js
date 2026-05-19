@@ -30,6 +30,33 @@
   });
 })();
 
+(function lazyMaps() {
+  const frames = document.querySelectorAll(".location-map iframe[data-src]");
+  if (!frames.length) return;
+
+  function mount(frame) {
+    frame.src = frame.dataset.src;
+    const wrap = frame.closest(".location-map");
+    if (wrap) {
+      frame.addEventListener("load", () => wrap.classList.remove("is-loading"), { once: true });
+    }
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    frames.forEach(mount);
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        mount(e.target);
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: "400px" });
+  frames.forEach((f) => io.observe(f));
+})();
+
 (function reveal() {
   const items = document.querySelectorAll(".reveal");
   if (!items.length || !("IntersectionObserver" in window)) {

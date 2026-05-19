@@ -592,6 +592,34 @@ section { scroll-margin-top: var(--nav-h); }
   .lang-toggle .lt-label { display: none; }
 }
 
+/* Mobile perf: backdrop-filter is GPU-expensive on phones */
+@media (max-width: 767px) {
+  .nav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: #fff;
+    border-bottom-color: var(--border);
+  }
+}
+
+/* Map placeholder shown until iframe lazy-loads */
+.location-map { position: relative; }
+.location-map.is-loading::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  border-radius: var(--radius);
+}
+.location-map.is-loading::after {
+  content: "Cargando mapa...";
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+body[data-lang="en"] .location-map.is-loading::after { content: "Loading map..."; }
+
 /* ── Reveal anims ────────────────────────────────────────────── */
 .reveal {
   opacity: 0;
