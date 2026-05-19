@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quick Stop Pharmacy | Puerto Pe&ntilde;asco, Sonora</title>
+  <meta name="description" content="Farmacia Quick Stop en Puerto Pe&ntilde;asco. Dos sucursales en Benito Ju&aacute;rez y Playa Bonita. Personal que habla ingl&eacute;s, precios honestos. Open late. 5.0 en Google." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neonframewebdev.github.io/quick-stop-pharmacy/" />
+  <meta property="og:title" content="Quick Stop Pharmacy | Puerto Pe&ntilde;asco" />
+  <meta property="og:description" content="Two locations in Rocky Point. English-speaking staff. Open late. 5.0 rating on Google." />
+  <meta property="og:image" content="https://neonframewebdev.github.io/quick-stop-pharmacy/assets/og-card.jpg" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quick Stop Pharmacy | Puerto Pe&ntilde;asco" />
+  <meta name="twitter:description" content="Two locations. English-speaking staff. Open late. 5.0 on Google." />
+  <meta name="twitter:image" content="https://neonframewebdev.github.io/quick-stop-pharmacy/assets/og-card.jpg" />
+
+  <link rel="canonical" href="https://neonframewebdev.github.io/quick-stop-pharmacy/" />
+  <meta name="theme-color" content="#0E7C7B" />
+
+  <!-- Structured data: Pharmacy schema for both locations -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Pharmacy",
+    "name": "Quick Stop Pharmacy",
+    "image": "https://neonframewebdev.github.io/quick-stop-pharmacy/assets/og-card.jpg",
+    "url": "https://neonframewebdev.github.io/quick-stop-pharmacy/",
+    "telephone": "+52-638-109-2129",
+    "priceRange": "$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "6"
+    },
+    "department": [
+      {
+        "@type": "Pharmacy",
+        "name": "Quick Stop Pharmacy - Benito Juárez",
+        "telephone": "+52-638-109-2129",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Mariano Matamoros, Benito Juárez",
+          "addressLocality": "Puerto Peñasco",
+          "postalCode": "83554",
+          "addressRegion": "Sonora",
+          "addressCountry": "MX"
+        }
+      },
+      {
+        "@type": "Pharmacy",
+        "name": "Quick Stop Pharmacy - Playa Bonita",
+        "telephone": "+52-638-109-2129",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Vallarta, C. 11a., Playas",
+          "addressLocality": "Puerto Peñasco",
+          "postalCode": "83555",
+          "addressRegion": "Sonora",
+          "addressCountry": "MX"
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "09:00",
+          "closes": "23:30"
+        }]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-lang="es">
+
+  <!-- Nav -->
+  <nav class="nav" aria-label="Navegaci&oacute;n principal">
+    <a href="#top" class="nav-logo" aria-label="Quick Stop Pharmacy">
+      <svg class="nav-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="6" y="14" width="36" height="28" rx="4" fill="#0E7C7B"/>
+        <rect x="11" y="22" width="4" height="12" rx="1" fill="#fff"/>
+        <rect x="22" y="22" width="4" height="12" rx="1" fill="#fff"/>
+        <path d="M28 22h4l4 12h-4l-1-3h-3l-1 3h-4z" fill="#fff"/>
+        <rect x="14" y="8" width="20" height="6" rx="2" fill="#F97316"/>
+      </svg>
+      <span class="nav-name">Quick Stop <span class="nav-name-light">Pharmacy</span></span>
+    </a>
+
+    <div class="nav-right">
+      <ul class="nav-links" role="list">
+        <li><a href="#productos" data-es="Lo que tenemos" data-en="What we carry">Lo que tenemos</a></li>
+        <li><a href="#confianza" data-es="Por qu&eacute; nosotros" data-en="Why us">Por qu&eacute; nosotros</a></li>
+        <li><a href="#sucursales" data-es="Sucursales" data-en="Locations">Sucursales</a></li>
+      </ul>
+
+      <button class="lang-toggle" aria-label="Switch to English" type="button">
+        <span class="lt-flag">&#x1F1FA;&#x1F1F8;</span>
+        <span class="lt-label">English</span>
+      </button>
+
+      <a href="tel:+526381092129" class="nav-cta" data-es="Llamar" data-en="Call">Llamar</a>
+
+      <button class="nav-hamburger" aria-label="Abrir men&uacute;" aria-expanded="false" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div id="nav-drawer" class="nav-drawer" role="navigation" aria-label="Men&uacute; m&oacute;vil">
+    <ul>
+      <li><a href="#productos" data-es="Lo que tenemos" data-en="What we carry">Lo que tenemos</a></li>
+      <li><a href="#confianza" data-es="Por qu&eacute; nosotros" data-en="Why us">Por qu&eacute; nosotros</a></li>
+      <li><a href="#sucursales" data-es="Sucursales" data-en="Locations">Sucursales</a></li>
+    </ul>
+    <a href="tel:+526381092129" class="drawer-cta" data-es="Llamar +52 638 109 2129" data-en="Call +52 638 109 2129">Llamar +52 638 109 2129</a>
+  </div>
+
+  <!-- Hero -->
+  <section id="top" class="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <span class="hero-rating">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span data-es="5.0 en Google" data-en="5.0 on Google">5.0 en Google</span>
+      </span>
+
+      <h1 class="hero-h1"
+          data-es="La farmacia que entiende al turista en Rocky Point."
+          data-en="The pharmacy that gets it in Rocky Point.">
+        La farmacia que entiende al turista en Rocky Point.
+      </h1>
+
+      <p class="hero-sub"
+         data-es="Dos sucursales en Puerto Pe&ntilde;asco. Personal que habla ingl&eacute;s. Precios honestos. Abierto hasta tarde."
+         data-en="Two locations in Puerto Pe&ntilde;asco. English-speaking staff. Honest prices. Open late.">
+        Dos sucursales en Puerto Pe&ntilde;asco. Personal que habla ingl&eacute;s. Precios honestos. Abierto hasta tarde.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="tel:+526381092129" class="btn-primary"
+           data-es="Llamar +52 638 109 2129" data-en="Call +52 638 109 2129">Llamar +52 638 109 2129</a>
+        <a href="#sucursales" class="btn-ghost"
+           data-es="Ver sucursales" data-en="See locations">Ver sucursales</a>
+      </div>
+
+      <ul class="hero-pills" aria-label="Beneficios">
+        <li data-es="Habla ingl&eacute;s" data-en="English spoken">Habla ingl&eacute;s</li>
+        <li data-es="Sin receta para muchos medicamentos" data-en="No prescription needed for many meds">Sin receta para muchos medicamentos</li>
+        <li data-es="Cerca de las playas" data-en="Steps from the beach">Cerca de las playas</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="productos" class="section section-light" aria-label="Lo que tenemos">
+    <div class="section-head">
+      <span class="eyebrow" data-es="LO QUE TENEMOS" data-en="WHAT WE CARRY">LO QUE TENEMOS</span>
+      <h2 class="section-title"
+          data-es="Lo que la gente cruza la frontera para conseguir."
+          data-en="The stuff people cross the border for.">
+        Lo que la gente cruza la frontera para conseguir.
+      </h2>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="4" y="6" width="16" height="14" rx="2"/>
+            <path d="M9 6V4a3 3 0 0 1 6 0v2"/>
+            <path d="M8 13h8M12 9v8"/>
+          </svg>
+        </div>
+        <h3 data-es="Recetas con o sin papel" data-en="Prescriptions, with or without paper">Recetas con o sin papel</h3>
+        <p data-es="Si tiene una receta de Estados Unidos, la surtimos. Si no, le orientamos. Muchos medicamentos aqu&iacute; no requieren receta como en EUA."
+           data-en="If you have a US prescription, we can fill it. If you don&apos;t, we&apos;ll guide you. Many meds here don&apos;t need a prescription like they do in the US.">
+          Si tiene una receta de Estados Unidos, la surtimos. Si no, le orientamos. Muchos medicamentos aqu&iacute; no requieren receta como en EUA.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M8 4h8l2 4-4 12H10L6 8z"/>
+            <path d="M10 8h4"/>
+          </svg>
+        </div>
+        <h3 data-es="Antibi&oacute;ticos comunes" data-en="Common antibiotics">Antibi&oacute;ticos comunes</h3>
+        <p data-es="Amoxicilina, ciprofloxacino, azitromicina y m&aacute;s. El farmac&eacute;utico le ayuda a elegir lo que necesita."
+           data-en="Amoxicillin, ciprofloxacin, azithromycin, and more. Our pharmacist helps you pick what fits.">
+          Amoxicilina, ciprofloxacino, azitromicina y m&aacute;s. El farmac&eacute;utico le ayuda a elegir lo que necesita.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="8"/>
+            <path d="M12 8v4M12 16h.01"/>
+          </svg>
+        </div>
+        <h3 data-es="Control y bienestar" data-en="Wellness &amp; daily">Control y bienestar</h3>
+        <p data-es="Presi&oacute;n arterial, diabetes, colesterol, tiroides. Las cosas de cada d&iacute;a, a precios honestos."
+           data-en="Blood pressure, diabetes, cholesterol, thyroid. The daily meds, at fair prices.">
+          Presi&oacute;n arterial, diabetes, colesterol, tiroides. Las cosas de cada d&iacute;a, a precios honestos.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          </svg>
+        </div>
+        <h3 data-es="Quemaduras y playa" data-en="Sun &amp; beach">Quemaduras y playa</h3>
+        <p data-es="Bloqueador, aloe vera, sales para deshidrataci&oacute;n, est&oacute;mago revuelto. Si pas&oacute; algo en la playa, lo arreglamos."
+           data-en="Sunscreen, aloe, electrolytes, upset stomach. If the beach got you, we fix it.">
+          Bloqueador, aloe vera, sales para deshidrataci&oacute;n, est&oacute;mago revuelto. Si pas&oacute; algo en la playa, lo arreglamos.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M3 12h4l3-9 4 18 3-9h4"/>
+          </svg>
+        </div>
+        <h3 data-es="Manejo del dolor" data-en="Pain management">Manejo del dolor</h3>
+        <p data-es="Analg&eacute;sicos, antiinflamatorios, relajantes musculares. Tratamiento corto y honesto."
+           data-en="Analgesics, anti-inflammatories, muscle relaxants. Short, honest treatment.">
+          Analg&eacute;sicos, antiinflamatorios, relajantes musculares. Tratamiento corto y honesto.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 21s-7-4.35-7-11a5 5 0 0 1 7-4.58A5 5 0 0 1 19 10c0 6.65-7 11-7 11z"/>
+          </svg>
+        </div>
+        <h3 data-es="Bienestar y cuidado personal" data-en="Wellness &amp; personal care">Bienestar y cuidado personal</h3>
+        <p data-es="Vitaminas, cosm&eacute;ticos, art&iacute;culos de higiene. Las cosas que olvid&oacute; en casa."
+           data-en="Vitamins, cosmetics, personal care. The stuff you left at home.">
+          Vitaminas, cosm&eacute;ticos, art&iacute;culos de higiene. Las cosas que olvid&oacute; en casa.
+        </p>
+      </div>
+    </div>
+
+    <p class="product-note" data-es="&iquest;Necesita algo en espec&iacute;fico? Llame al +52 638 109 2129. Si no lo tenemos, le decimos d&oacute;nde conseguirlo."
+       data-en="Looking for something specific? Call +52 638 109 2129. If we don&apos;t have it, we&apos;ll tell you where to get it.">
+      &iquest;Necesita algo en espec&iacute;fico? Llame al +52 638 109 2129. Si no lo tenemos, le decimos d&oacute;nde conseguirlo.
+    </p>
+  </section>
+
+  <!-- Trust -->
+  <section id="confianza" class="section section-tint" aria-label="Por qu&eacute; nosotros">
+    <div class="section-head">
+      <span class="eyebrow" data-es="POR QU&Eacute; CONFIAR" data-en="WHY TRUST US">POR QU&Eacute; CONFIAR</span>
+      <h2 class="section-title"
+          data-es="Lo que nos hace diferentes en Rocky Point."
+          data-en="What makes us different in Rocky Point.">
+        Lo que nos hace diferentes en Rocky Point.
+      </h2>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-num">01</div>
+        <h3 data-es="Personal que habla ingl&eacute;s" data-en="English-speaking staff">Personal que habla ingl&eacute;s</h3>
+        <p data-es="Atendemos en espa&ntilde;ol y en ingl&eacute;s. No tiene que adivinar nombres de medicamentos, le explicamos todo."
+           data-en="We work in Spanish and English. You don&apos;t guess at medicine names, we walk you through it.">
+          Atendemos en espa&ntilde;ol y en ingl&eacute;s. No tiene que adivinar nombres de medicamentos, le explicamos todo.
+        </p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-num">02</div>
+        <h3 data-es="5.0 en Google" data-en="5.0 on Google">5.0 en Google</h3>
+        <p data-es="Cada cliente que nos ha calificado en Google nos dio 5 estrellas. Sin trucos, solo trato derecho."
+           data-en="Every customer who rated us on Google gave us 5 stars. No tricks, just straight dealing.">
+          Cada cliente que nos ha calificado en Google nos dio 5 estrellas. Sin trucos, solo trato derecho.
+        </p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-num">03</div>
+        <h3 data-es="Dos sucursales" data-en="Two locations">Dos sucursales</h3>
+        <p data-es="Una en el centro, otra cerca de las playas. La que le quede m&aacute;s cerca est&aacute; abierta hoy."
+           data-en="One downtown, one near the beaches. Whichever is closest is open today.">
+          Una en el centro, otra cerca de las playas. La que le quede m&aacute;s cerca est&aacute; abierta hoy.
+        </p>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-num">04</div>
+        <h3 data-es="Abierto hasta tarde" data-en="Open late">Abierto hasta tarde</h3>
+        <p data-es="La sucursal de Playa Bonita cierra a las 11:30 PM. Cuando otras farmacias ya est&aacute;n cerradas, nosotros seguimos atendiendo."
+           data-en="Our Playa Bonita store closes at 11:30 PM. When other pharmacies are already closed, we&apos;re still open.">
+          La sucursal de Playa Bonita cierra a las 11:30 PM. Cuando otras farmacias ya est&aacute;n cerradas, nosotros seguimos atendiendo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section id="sucursales" class="section section-light" aria-label="Nuestras sucursales">
+    <div class="section-head">
+      <span class="eyebrow" data-es="SUCURSALES" data-en="LOCATIONS">SUCURSALES</span>
+      <h2 class="section-title"
+          data-es="Dos tiendas. Una llamada."
+          data-en="Two stores. One number.">
+        Dos tiendas. Una llamada.
+      </h2>
+    </div>
+
+    <div class="location-grid">
+
+      <!-- Location 1: Benito Juarez -->
+      <article class="location-card">
+        <div class="location-head">
+          <span class="location-tag" data-es="SUCURSAL 1" data-en="LOCATION 1">SUCURSAL 1</span>
+          <h3 class="location-name">Benito Ju&aacute;rez</h3>
+          <p class="location-sub" data-es="Centro de la ciudad" data-en="Downtown">Centro de la ciudad</p>
+        </div>
+        <address class="location-address">
+          Calle Mariano Matamoros<br />
+          Col. Benito Ju&aacute;rez<br />
+          83554 Puerto Pe&ntilde;asco, Son.
+        </address>
+        <div class="location-actions">
+          <a href="tel:+526381092129" class="btn-primary-sm" data-es="Llamar" data-en="Call">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Quick+Stop+Pharmacy+Mariano+Matamoros+Puerto+Penasco" target="_blank" rel="noopener" class="btn-ghost-sm" data-es="C&oacute;mo llegar" data-en="Directions">C&oacute;mo llegar</a>
+        </div>
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps?q=Quick+Stop+Pharmacy+Mariano+Matamoros+Puerto+Penasco&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            title="Mapa de Quick Stop Pharmacy Benito Juarez"></iframe>
+        </div>
+      </article>
+
+      <!-- Location 2: Playa Bonita -->
+      <article class="location-card featured">
+        <span class="location-badge" data-es="Abierto hasta 11:30 PM" data-en="Open until 11:30 PM">Abierto hasta 11:30 PM</span>
+        <div class="location-head">
+          <span class="location-tag" data-es="SUCURSAL 2" data-en="LOCATION 2">SUCURSAL 2</span>
+          <h3 class="location-name">Playa Bonita</h3>
+          <p class="location-sub" data-es="Cerca de las playas" data-en="Near the beaches">Cerca de las playas</p>
+        </div>
+        <address class="location-address">
+          Av. Vallarta, C. 11a.<br />
+          Col. Playas<br />
+          83555 Puerto Pe&ntilde;asco, Son.
+        </address>
+        <div class="location-actions">
+          <a href="tel:+526381092129" class="btn-primary-sm" data-es="Llamar" data-en="Call">Llamar</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Quick+Stop+Pharmacy+Vallarta+Playa+Bonita+Puerto+Penasco" target="_blank" rel="noopener" class="btn-ghost-sm" data-es="C&oacute;mo llegar" data-en="Directions">C&oacute;mo llegar</a>
+        </div>
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps?q=Quick+Stop+Pharmacy+Vallarta+Playas+Puerto+Penasco&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            title="Mapa de Quick Stop Pharmacy Playa Bonita"></iframe>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CTA block -->
+  <section class="cta-block" aria-label="Llamar">
+    <div class="cta-inner">
+      <span class="eyebrow eyebrow-light" data-es="LLAMAR DIRECTO" data-en="CALL US DIRECT">LLAMAR DIRECTO</span>
+      <h2 class="cta-title"
+          data-es="&iquest;Sabe qu&eacute; necesita? Lo tenemos listo cuando llegue."
+          data-en="Know what you need? We&apos;ll have it ready when you arrive.">
+        &iquest;Sabe qu&eacute; necesita? Lo tenemos listo cuando llegue.
+      </h2>
+      <p class="cta-sub"
+         data-es="Una llamada y nosotros le confirmamos disponibilidad, precio y la sucursal m&aacute;s cercana."
+         data-en="One call and we confirm availability, price, and which store is closest to you.">
+        Una llamada y nosotros le confirmamos disponibilidad, precio y la sucursal m&aacute;s cercana.
+      </p>
+      <a href="tel:+526381092129" class="btn-primary-xl"
+         data-es="+52 638 109 2129" data-en="+52 638 109 2129">+52 638 109 2129</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg class="footer-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="14" width="36" height="28" rx="4" fill="#0E7C7B"/>
+          <rect x="11" y="22" width="4" height="12" rx="1" fill="#fff"/>
+          <rect x="22" y="22" width="4" height="12" rx="1" fill="#fff"/>
+          <path d="M28 22h4l4 12h-4l-1-3h-3l-1 3h-4z" fill="#fff"/>
+          <rect x="14" y="8" width="20" height="6" rx="2" fill="#F97316"/>
+        </svg>
+        <p class="footer-name">Quick Stop Pharmacy</p>
+        <p class="footer-copy">
+          &copy; <span class="copyright-year"></span> Quick Stop Pharmacy. Puerto Pe&ntilde;asco, Sonora.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-label" data-es="CONTACTO" data-en="CONTACT">CONTACTO</p>
+        <a href="tel:+526381092129" class="footer-link">+52 638 109 2129</a>
+        <p class="footer-tiny" data-es="Disponible para llamadas todo el d&iacute;a." data-en="Available for calls all day.">Disponible para llamadas todo el d&iacute;a.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-label" data-es="SUCURSALES" data-en="LOCATIONS">SUCURSALES</p>
+        <p class="footer-link-plain"><strong>Benito Ju&aacute;rez</strong> &middot; C. Mariano Matamoros</p>
+        <p class="footer-link-plain"><strong>Playa Bonita</strong> &middot; Av. Vallarta</p>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span data-es="Este sitio es de muestra. La informaci&oacute;n es real."
+            data-en="This is a sample site. The information is real.">
+        Este sitio es de muestra. La informaci&oacute;n es real.
+      </span>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

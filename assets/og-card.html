@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Outfit:wght@700;800&display=swap" rel="stylesheet" />
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden;background:#fff;font-family:'Inter',sans-serif;color:#0F172A}
+  .card{
+    width:1200px;height:630px;position:relative;
+    background:
+      radial-gradient(ellipse 60% 80% at 10% 50%, rgba(14,124,123,0.08) 0%, transparent 65%),
+      radial-gradient(ellipse 60% 80% at 100% 100%, rgba(249,115,22,0.08) 0%, transparent 65%),
+      #fff;
+    display:grid;grid-template-columns: 1fr 380px;gap:60px;
+    padding: 70px 80px;
+    align-items:center;
+  }
+  .text{display:flex;flex-direction:column;gap:18px}
+  .rating-pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#F0FDFA;color:#0A5957;
+    padding:8px 16px;border-radius:999px;font-size:16px;font-weight:600;
+    border:1px solid rgba(14,124,123,0.2);
+    width:fit-content;
+  }
+  .stars{color:#F97316;letter-spacing:2px}
+  .h1{
+    font-family:'Outfit',sans-serif;font-weight:800;
+    font-size:78px;line-height:1.04;letter-spacing:-0.02em;
+    color:#0F172A;
+  }
+  .accent{color:#0E7C7B}
+  .sub{
+    font-size:22px;color:#334155;line-height:1.45;max-width:600px;
+  }
+  .tags{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap}
+  .tag{
+    background:#fff;color:#334155;
+    padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;
+    border:1px solid #E2E8F0;
+  }
+  .visual{
+    position:relative;
+    width:380px;height:480px;
+    background:linear-gradient(180deg, #0E7C7B 0%, #0A5957 100%);
+    border-radius:24px;
+    box-shadow: 0 30px 60px rgba(14,124,123,0.30), 0 10px 24px rgba(0,0,0,0.10);
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  .visual::before{
+    content:"";position:absolute;inset:0;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.18) 0%, transparent 50%);
+  }
+  .cross{
+    position:relative;
+    width:240px;height:240px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .cross::before, .cross::after{
+    content:"";position:absolute;background:#fff;border-radius:18px;
+  }
+  .cross::before{width:240px;height:74px}
+  .cross::after{width:74px;height:240px}
+  .qs{
+    position:absolute;
+    bottom:32px;left:0;right:0;text-align:center;
+    color:#fff;font-family:'Outfit',sans-serif;
+    font-weight:700;font-size:32px;letter-spacing:0.06em;
+  }
+  .qs-tag{
+    display:block;font-size:14px;color:rgba(255,255,255,0.7);letter-spacing:0.2em;margin-top:4px;font-weight:500;
+  }
+  .url{
+    position:absolute;bottom:36px;left:80px;
+    font-size:14px;font-weight:600;
+    color:#94A3B8;letter-spacing:0.15em;text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="text">
+    <div class="rating-pill">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>5.0 en Google</span>
+    </div>
+    <h1 class="h1">Quick Stop<br/><span class="accent">Pharmacy</span></h1>
+    <p class="sub">Dos sucursales en Puerto Pe&ntilde;asco. Personal que habla ingl&eacute;s. Abierto hasta tarde.</p>
+    <div class="tags">
+      <span class="tag">Benito Ju&aacute;rez</span>
+      <span class="tag">Playa Bonita</span>
+      <span class="tag">+52 638 109 2129</span>
+    </div>
+  </div>
+  <div class="visual">
+    <div class="cross"></div>
+    <div class="qs">
+      QUICK STOP
+      <span class="qs-tag">PHARMACY</span>
+    </div>
+  </div>
+  <div class="url">neonframewebdesign.com / quick-stop-pharmacy</div>
+</div>
+</body>
+</html>
