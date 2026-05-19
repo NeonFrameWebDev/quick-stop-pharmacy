@@ -11,28 +11,28 @@
   .card{
     width:1200px;height:630px;position:relative;
     background:
-      radial-gradient(ellipse 60% 80% at 10% 50%, rgba(14,124,123,0.08) 0%, transparent 65%),
-      radial-gradient(ellipse 60% 80% at 100% 100%, rgba(249,115,22,0.08) 0%, transparent 65%),
+      radial-gradient(ellipse 50% 60% at 8% 30%, rgba(220,38,38,0.10) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 50% at 95% 95%, rgba(37,99,235,0.08) 0%, transparent 65%),
       #fff;
-    display:grid;grid-template-columns: 1fr 380px;gap:60px;
+    display:grid;grid-template-columns: 1fr 360px;gap:70px;
     padding: 70px 80px;
     align-items:center;
   }
   .text{display:flex;flex-direction:column;gap:18px}
   .rating-pill{
     display:inline-flex;align-items:center;gap:8px;
-    background:#F0FDFA;color:#0A5957;
+    background:#FEF2F2;color:#991B1B;
     padding:8px 16px;border-radius:999px;font-size:16px;font-weight:600;
-    border:1px solid rgba(14,124,123,0.2);
+    border:1px solid rgba(220,38,38,0.22);
     width:fit-content;
   }
-  .stars{color:#F97316;letter-spacing:2px}
+  .stars{color:#F59E0B;letter-spacing:2px}
   .h1{
     font-family:'Outfit',sans-serif;font-weight:800;
-    font-size:78px;line-height:1.04;letter-spacing:-0.02em;
+    font-size:80px;line-height:1.02;letter-spacing:-0.025em;
     color:#0F172A;
   }
-  .accent{color:#0E7C7B}
+  .accent{color:#DC2626}
   .sub{
     font-size:22px;color:#334155;line-height:1.45;max-width:600px;
   }
@@ -40,44 +40,48 @@
   .tag{
     background:#fff;color:#334155;
     padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;
-    border:1px solid #E2E8F0;
+    border:1px solid #E5E7EB;
   }
+  .tag.tag-blue { background:#EFF6FF; color:#1E40AF; border-color: rgba(37,99,235,0.25); }
+
+  /* Capsule visual */
   .visual{
     position:relative;
-    width:380px;height:480px;
-    background:linear-gradient(180deg, #0E7C7B 0%, #0A5957 100%);
-    border-radius:24px;
-    box-shadow: 0 30px 60px rgba(14,124,123,0.30), 0 10px 24px rgba(0,0,0,0.10);
+    width:360px;height:480px;
     display:flex;align-items:center;justify-content:center;
-    overflow:hidden;
   }
-  .visual::before{
-    content:"";position:absolute;inset:0;
-    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.18) 0%, transparent 50%);
-  }
-  .cross{
+  .capsule{
     position:relative;
-    width:240px;height:240px;
-    display:flex;align-items:center;justify-content:center;
+    width:200px;height:380px;
+    filter: drop-shadow(0 30px 50px rgba(220,38,38,0.22)) drop-shadow(0 10px 20px rgba(0,0,0,0.08));
   }
-  .cross::before, .cross::after{
-    content:"";position:absolute;background:#fff;border-radius:18px;
+  .capsule .top{
+    position:absolute;top:0;left:0;right:0;height:50%;
+    background:#2563EB;
+    border-radius: 100px 100px 0 0;
   }
-  .cross::before{width:240px;height:74px}
-  .cross::after{width:74px;height:240px}
-  .qs{
-    position:absolute;
-    bottom:32px;left:0;right:0;text-align:center;
-    color:#fff;font-family:'Outfit',sans-serif;
-    font-weight:700;font-size:32px;letter-spacing:0.06em;
+  .capsule .bot{
+    position:absolute;bottom:0;left:0;right:0;height:50%;
+    background:#DC2626;
+    border-radius: 0 0 100px 100px;
   }
-  .qs-tag{
-    display:block;font-size:14px;color:rgba(255,255,255,0.7);letter-spacing:0.2em;margin-top:4px;font-weight:500;
+  .capsule .seam{
+    position:absolute;top:50%;left:0;right:0;height:3px;
+    background: #fff;
+    transform: translateY(-50%);
   }
+  /* subtle inner highlight */
+  .capsule .top::before, .capsule .bot::before {
+    content:""; position:absolute; top:18px; left:24px; right:90px; height:60%;
+    background:linear-gradient(180deg, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 60px;
+    pointer-events:none;
+  }
+
   .url{
     position:absolute;bottom:36px;left:80px;
-    font-size:14px;font-weight:600;
-    color:#94A3B8;letter-spacing:0.15em;text-transform:uppercase;
+    font-size:13px;font-weight:600;
+    color:#94A3B8;letter-spacing:0.18em;text-transform:uppercase;
   }
 </style>
 </head>
@@ -93,14 +97,14 @@
     <div class="tags">
       <span class="tag">Benito Ju&aacute;rez</span>
       <span class="tag">Playa Bonita</span>
-      <span class="tag">+52 638 109 2129</span>
+      <span class="tag tag-blue">+52 638 109 2129</span>
     </div>
   </div>
   <div class="visual">
-    <div class="cross"></div>
-    <div class="qs">
-      QUICK STOP
-      <span class="qs-tag">PHARMACY</span>
+    <div class="capsule">
+      <div class="top"></div>
+      <div class="bot"></div>
+      <div class="seam"></div>
     </div>
   </div>
   <div class="url">neonframewebdesign.com / quick-stop-pharmacy</div>

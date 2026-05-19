@@ -5,18 +5,18 @@
 /* ── Variables ───────────────────────────────────────────────── */
 :root {
   --bg: #ffffff;
-  --bg-alt: #F8FAFC;
-  --bg-tint: #F0FDFA;
-  --primary: #0E7C7B;
-  --primary-dark: #0A5957;
-  --primary-soft: rgba(14, 124, 123, 0.08);
-  --accent: #F97316;
-  --accent-dark: #C2410C;
+  --bg-alt: #FAFAFA;
+  --bg-tint: #FEF2F2;
+  --primary: #DC2626;
+  --primary-dark: #991B1B;
+  --primary-soft: rgba(220, 38, 38, 0.08);
+  --accent: #2563EB;
+  --accent-dark: #1E40AF;
   --text: #0F172A;
   --text-light: #334155;
   --muted: #64748B;
-  --border: #E2E8F0;
-  --border-soft: #F1F5F9;
+  --border: #E5E7EB;
+  --border-soft: #F3F4F6;
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
   --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06);
   --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.10);
@@ -160,8 +160,8 @@ section { scroll-margin-top: var(--nav-h); }
 /* ── Hero ────────────────────────────────────────────────────── */
 .hero {
   background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14, 124, 123, 0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 85% 30%, rgba(249, 115, 22, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(220, 38, 38, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 30%, rgba(37, 99, 235, 0.05) 0%, transparent 60%),
     #fff;
   padding: clamp(3rem, 7vw, 5rem) var(--edge) clamp(4rem, 8vw, 6rem);
 }
@@ -176,9 +176,9 @@ section { scroll-margin-top: var(--nav-h); }
   font-size: 0.84rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(14, 124, 123, 0.18);
+  border: 1px solid rgba(220, 38, 38, 0.18);
 }
-.stars { color: var(--accent); letter-spacing: 1px; font-size: 0.9rem; }
+.stars { color: #F59E0B; letter-spacing: 1px; font-size: 0.9rem; }
 
 .hero-h1 {
   font-family: var(--font-display);
@@ -212,10 +212,10 @@ section { scroll-margin-top: var(--nav-h); }
   font-size: 1rem;
   letter-spacing: -0.005em;
   transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  box-shadow: 0 6px 20px rgba(14, 124, 123, 0.25);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.22);
   display: inline-block;
 }
-.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(14, 124, 123, 0.32); }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(220, 38, 38, 0.30); }
 
 .btn-ghost {
   background: transparent;
@@ -292,7 +292,7 @@ section { scroll-margin-top: var(--nav-h); }
 .product-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(14, 124, 123, 0.3);
+  border-color: rgba(220, 38, 38, 0.32);
 }
 .product-icon {
   width: 44px; height: 44px;
@@ -388,7 +388,7 @@ section { scroll-margin-top: var(--nav-h); }
 .location-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .location-card.featured {
   border-color: var(--primary);
-  background: linear-gradient(180deg, rgba(14, 124, 123, 0.03) 0%, #fff 40%);
+  background: linear-gradient(180deg, rgba(220, 38, 38, 0.04) 0%, #fff 40%);
 }
 .location-badge {
   position: absolute;
